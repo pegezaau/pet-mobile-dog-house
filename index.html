@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Mobile Dog House — Mobile Pet Grooming | Pompano Beach, FL</title>
+<meta name="description" content="Mobile pet grooming in Pompano Beach & Broward, FL. Bath & full grooming at your doorstep — no crates, no waiting rooms. Clean, fresh, happy. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F1; --card:#FFFFFF; --band:#EFF3E8;
+  --vinho:#127A3D; --vinho-dark:#0B5C2D;
+  --ouro:#16345F; --terra:#8F6F69; --grafite:#2B2424;
+  --texto:#3A3232; --suave:#6E5F5C;
+  --linha:rgba(22,52,95,.45);
+  --radius:18px;
+  --shadow:0 18px 45px rgba(43,36,36,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;color:var(--grafite);font-weight:500}
+h1 em,h2 em{font-style:italic;color:var(--vinho)}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro)}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:var(--vinho);color:#fff;font-weight:700;font-size:.98rem;padding:15px 26px;border-radius:999px;transition:.25s;box-shadow:0 12px 28px rgba(18,122,61,.28)}
+.btn-wa:hover{background:var(--vinho-dark);transform:translateY(-2px)}
+.btn-wa svg{width:20px;height:20px;flex:none}
+.btn-wa.small{padding:10px 18px;font-size:.86rem}
+.microcopy{font-size:.82rem;color:var(--suave);margin-top:12px}
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(248,244,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(18,122,61,.10)}
+.header-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.logo{line-height:1.15}
+.logo .nome{font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;color:var(--grafite)}
+.logo .sub{font-size:.66rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro)}
+/* HERO */
+.hero{padding:56px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);line-height:1.12;letter-spacing:-.01em;margin:18px 0 16px}
+.hero .subtitulo{font-size:1.13rem;font-weight:800;color:var(--grafite);margin-bottom:12px}
+.hero .leve{font-size:1.02rem;color:var(--suave);max-width:52ch;margin-bottom:28px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pill{font-size:.78rem;font-weight:700;color:var(--vinho);background:#fff;border:1px solid rgba(18,122,61,.22);padding:7px 13px;border-radius:999px}
+.pill b{color:var(--ouro);font-weight:800}
+/* FOTO / ARCO */
+.hero-foto{position:relative}
+.arco{border:3px solid var(--vinho);border-radius:999px 999px 22px 22px;padding:10px;background:#fff;box-shadow:var(--shadow)}
+.arco img{border-radius:999px 999px 14px 14px;width:100%;height:520px;object-fit:cover;object-position:top center}
+.cred-card{position:absolute;background:#fff;border-radius:14px;box-shadow:0 14px 34px rgba(43,36,36,.16);padding:12px 16px;display:flex;gap:11px;align-items:center;max-width:250px}
+.cred-card svg{width:26px;height:26px;flex:none;color:var(--ouro)}
+.cred-card .t{font-size:.8rem;font-weight:800;color:var(--grafite);line-height:1.3}
+.cred-card .s{font-size:.72rem;color:var(--suave);line-height:1.35}
+.cred-1{top:56px;left:-38px}
+.cred-2{bottom:118px;right:-30px}
+.painel{background:var(--vinho);color:#fff;border-radius:16px;padding:20px 24px;margin-top:16px;text-align:center}
+.painel .nome{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600}
+.painel .cargo{font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#E9C87E;margin:3px 0 8px}
+.painel .frase{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:#F6E8D8}
+/* SEÇÕES */
+section{padding:72px 0}
+.sec-head{max-width:720px;margin-bottom:42px}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.18;margin:14px 0 12px}
+.sec-head p{color:var(--suave);font-size:1rem}
+.dor{background:var(--band);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.dor-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.dor p{color:var(--texto);margin-bottom:14px}
+.dor .destaque{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--vinho);line-height:1.45}
+/* SERVIÇOS */
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.serv{background:var(--card);border:1px solid rgba(18,122,61,.10);border-radius:var(--radius);padding:28px 24px;transition:.25s;display:flex;flex-direction:column}
+.serv:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(22,52,95,.5)}
+.serv svg{width:34px;height:34px;color:var(--vinho);margin-bottom:16px}
+.serv h3{font-size:1.18rem;margin-bottom:8px}
+.serv p{font-size:.92rem;color:var(--suave);flex:1}
+.serv a{margin-top:16px;font-size:.86rem;font-weight:800;color:var(--vinho);display:inline-flex;align-items:center;gap:6px}
+.serv a:hover{color:var(--ouro)}
+/* COMO FUNCIONA */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.passo{background:var(--card);border-radius:var(--radius);padding:28px 24px;border-top:3px solid var(--ouro)}
+.passo .num{font-family:'Fraunces',serif;font-size:2rem;color:var(--vinho);line-height:1}
+.passo h3{font-size:1.08rem;margin:12px 0 6px}
+.passo p{font-size:.92rem;color:var(--suave)}
+/* SOBRE */
+.sobre{background:var(--band);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.sobre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.sobre .arco img{height:460px}
+.sobre h2{font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.18;margin:14px 0 16px}
+.sobre p{margin-bottom:14px;color:var(--texto)}
+.sobre .citacao{font-family:'Fraunces',serif;font-style:italic;font-size:1.22rem;color:var(--vinho);line-height:1.5;border-left:3px solid var(--ouro);padding-left:18px;margin:22px 0}
+.creds{list-style:none;margin-top:8px}
+.creds li{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid rgba(18,122,61,.10);font-size:.95rem}
+.creds li svg{width:19px;height:19px;color:var(--ouro);flex:none;margin-top:3px}
+/* FAIXA */
+.faixa{background:var(--vinho);color:#fff;text-align:center;padding:54px 24px}
+.faixa .f1{font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#E9C87E}
+.faixa .f2{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);margin-top:10px;line-height:1.3}
+.faixa .f2 em{font-style:italic;color:#E9C87E}
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+form{background:var(--card);border:1px solid rgba(18,122,61,.12);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+form label{font-size:.82rem;font-weight:800;color:var(--grafite);display:block;margin:16px 0 6px}
+form label:first-child{margin-top:0}
+form input,form select,form textarea{width:100%;padding:13px 14px;border:1.5px solid #E3D9CF;border-radius:10px;font-family:inherit;font-size:.95rem;background:#FDFBF8;color:var(--texto)}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--vinho)}
+form .erro{border-color:#C0392B !important}
+.form-btn{width:100%;justify-content:center;margin-top:22px;border:none;cursor:pointer;font-family:inherit}
+.form-nota{font-size:.78rem;color:var(--suave);text-align:center;margin-top:12px}
+/* FAQ */
+.faq-item{background:var(--card);border:1px solid rgba(18,122,61,.10);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;font-family:inherit;font-size:1rem;font-weight:700;color:var(--grafite);text-align:left;padding:20px 22px;cursor:pointer;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq-q .mais{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--ouro);transition:.3s;line-height:1}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 22px 20px;color:var(--suave);font-size:.94rem}
+.faq-item.aberto .mais{transform:rotate(45deg)}
+/* CTA FINAL */
+.cta-final{background:var(--band);border-top:1px solid var(--linha)}
+.cta-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.cta-grid h2{font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.18;margin:14px 0 14px}
+.cta-grid p{color:var(--suave);margin-bottom:26px;max-width:48ch}
+.cta-grid .arco img{height:420px}
+.dados{list-style:none;margin-top:26px}
+.dados li{display:flex;gap:11px;align-items:center;padding:7px 0;font-size:.95rem;color:var(--texto)}
+.dados li svg{width:19px;height:19px;color:var(--vinho);flex:none}
+/* RODAPÉ */
+footer{background:var(--grafite);color:#D9CFC8;padding:46px 0 30px;font-size:.9rem}
+.foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer .nome{font-family:'Fraunces',serif;font-size:1.2rem;color:#fff}
+footer a{color:#E9C87E}
+.foot-base{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;font-size:.78rem;color:#A99B93;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* FLUTUANTE */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+@media(max-width:960px){
+  .hero-grid,.dor-grid,.sobre-grid,.form-grid,.cta-grid{grid-template-columns:1fr}
+  .serv-grid,.passos{grid-template-columns:1fr 1fr}
+  .cred-1{left:6px;top:26px}
+  .cred-2{right:6px;bottom:110px}
+  .arco img{height:440px}
+  section{padding:54px 0}
+}
+@media(max-width:560px){
+  .serv-grid,.passos{grid-template-columns:1fr}
+  .header-in .btn-wa span{display:none}
+  .header-in .btn-wa{padding:11px 13px}
+  .hero{padding:38px 0 48px}
+  .arco img{height:400px}
+  .cred-card{max-width:210px;padding:10px 12px}
+}
+
+.arco img{object-position:top center}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#">
+      <div class="nome">Pet Mobile Dog House</div>
+      <div class="sub">Mobile Pet Grooming — Pompano Beach, FL</div>
+    </a>
+    <a class="btn-wa small" href="https://wa.me/19548566521?text=Hi!%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20grooming%20appointment%20for%20my%20pet." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Mobile Pet Grooming — Pompano Beach &amp; Broward, FL</div>
+      <h1>Clean. Fresh. <em>Happy.</em></h1>
+      <p class="subtitulo">Full-service bath &amp; grooming that comes to your door.</p>
+      <p class="leve">No crates, no waiting rooms, no Saturday traffic. We park at your home and pamper your pet one-on-one — bath, haircut and lots of love, right outside your door.</p>
+      <a class="btn-wa" href="https://wa.me/19548566521?text=Hi!%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20grooming%20appointment%20for%20my%20pet." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+        Book Your Appointment!
+      </a>
+      <p class="microcopy">Booking by WhatsApp — pick your day and we roll up to you.</p>
+      <div class="pills">
+        <span class="pill">We <b>come to you</b></span>
+        <span class="pill">Dogs <b>&amp; cats</b> welcome</span>
+        <span class="pill">Pompano Beach <b>&amp; Broward</b></span>
+        <span class="pill">English <b>&amp; Português</b></span>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <div class="arco"><img src="logo-petmobile.png" alt="Pet Mobile Dog House — official logo with a dog and a cat in a bathtub"></div>
+      <div class="cred-card cred-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V21h13V9.5" stroke-linejoin="round"/><circle cx="12" cy="14.5" r="2.2"/></svg>
+        <div><div class="t">At your doorstep</div><div class="s">Grooming at your home — no trip to the salon</div></div>
+      </div>
+      <div class="cred-card cred-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5s-8-4.9-8-10.4C4 6.9 6.4 5 8.8 5c1.4 0 2.6.7 3.2 1.7C12.6 5.7 13.8 5 15.2 5 17.6 5 20 6.9 20 10.1c0 5.5-8 10.4-8 10.4z" stroke-linejoin="round"/></svg>
+        <div><div class="t">One-on-one care</div><div class="s">Your pet, start to finish — no crates</div></div>
+      </div>
+      <div class="painel">
+        <div class="nome">Pet Mobile Dog House</div>
+        <div class="cargo">Banho e Tosa — Mobile Grooming</div>
+        <div class="frase">"Clean • Fresh • Happy"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section class="dor">
+  <div class="wrap dor-grid">
+    <div>
+      <div class="eyebrow">Why mobile?</div>
+      <h2 class="serif" style="font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.18;margin:14px 0 12px">Salon day shouldn't <em>eat your whole day</em></h2>
+      <p class="destaque">"Drop-off in the morning, pick-up in the afternoon — and a stressed pet waiting in a crate in between. There's an easier way."</p>
+    </div>
+    <div>
+      <p>With mobile grooming, the salon parks right at your home. Your pet is groomed start to finish by the same caring hands — no car rides, no cages, no other barking dogs.</p>
+      <p>You don't drive anywhere. You don't wait anywhere. When we're done, your best friend walks back inside clean, fresh and happy.</p>
+      <p>That's the Pet Mobile Dog House way — banho e tosa with Brazilian warmth, at your Florida doorstep.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Bath &amp; grooming, <em>at your home</em></h2>
+      <p>Pick a service and book it on WhatsApp:</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v2a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6v-2z" stroke-linejoin="round"/><path d="M6 12V6a2 2 0 0 1 4 0" stroke-linecap="round"/><circle cx="17" cy="6" r="1.3"/><circle cx="19.5" cy="9" r="1"/></svg>
+        <h3>Bath &amp; Brush</h3>
+        <p>A warm bath, gentle dry and a full brush-out — the classic banho that leaves the coat soft, shiny and smelling great.</p>
+        <a href="https://wa.me/19548566521?text=Hi!%20I%27d%20like%20to%20book%20a%20Bath%20%26%20Brush%20for%20my%20pet." target="_blank" rel="noopener">Book this →</a>
+      </div>
+      <div class="serv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="7" r="2.4"/><circle cx="6" cy="17" r="2.4"/><path d="M8 8.5L20 19M8 15.5L20 5" stroke-linecap="round"/></svg>
+        <h3>Full Grooming</h3>
+        <p>Bath plus a haircut styled to your pet's breed and your taste — the complete tosa, finished with care.</p>
+        <a href="https://wa.me/19548566521?text=Hi!%20I%27d%20like%20to%20book%20a%20Full%20Grooming%20(haircut)%20for%20my%20pet." target="_blank" rel="noopener">Book this →</a>
+      </div>
+      <div class="serv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.1 4.9L19.5 9l-4 3.7 1.1 5.3L12 15.4 7.4 18l1.1-5.3-4-3.7 5.4-1.1L12 3z" stroke-linejoin="round"/></svg>
+        <h3>Nails, Ears &amp; Finishing</h3>
+        <p>Nail trim, ear cleaning and the finishing touches that keep your pet comfortable between grooms.</p>
+        <a href="https://wa.me/19548566521?text=Hi!%20I%27d%20like%20to%20ask%20about%20nail%20trim%20and%20finishing%20care%20for%20my%20pet." target="_blank" rel="noopener">Book this →</a>
+      </div>
+      <div class="serv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5s-8-4.9-8-10.4C4 6.9 6.4 5 8.8 5c1.4 0 2.6.7 3.2 1.7C12.6 5.7 13.8 5 15.2 5 17.6 5 20 6.9 20 10.1c0 5.5-8 10.4-8 10.4z" stroke-linejoin="round"/></svg>
+        <h3>Puppy &amp; Senior Care</h3>
+        <p>A slower, gentler pace for first-timers, puppies and older pets who need extra patience and love.</p>
+        <a href="https://wa.me/19548566521?text=Hi!%20I%27d%20like%20to%20book%20gentle%20grooming%20for%20my%20puppy%20%2F%20senior%20pet." target="_blank" rel="noopener">Book this →</a>
+      </div>
+      <div class="serv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7.5" cy="8" r="1.6"/><circle cx="12" cy="5.8" r="1.6"/><circle cx="16.5" cy="8" r="1.6"/><path d="M12 10.5c2.9 0 5.2 2.2 5.2 4.6 0 1.9-1.5 3.1-3.4 3.1-1 0-1.3-.3-1.8-.3s-.8.3-1.8.3c-1.9 0-3.4-1.2-3.4-3.1 0-2.4 2.3-4.6 5.2-4.6z" stroke-linejoin="round"/></svg>
+        <h3>Cats Welcome Too</h3>
+        <p>Our logo says it all: cats are part of the family here — gentle bath &amp; grooming for your feline, at home.</p>
+        <a href="https://wa.me/19548566521?text=Hi!%20I%27d%20like%20to%20ask%20about%20grooming%20for%20my%20cat." target="_blank" rel="noopener">Book this →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How it works</div>
+      <h2>Three steps, <em>zero driving</em></h2>
+    </div>
+    <div class="passos">
+      <div class="passo"><div class="num">1</div><h3>Book on WhatsApp</h3><p>Send a message, tell us about your pet and pick the day that suits you.</p></div>
+      <div class="passo"><div class="num">2</div><h3>We park at your home</h3><p>Our mobile grooming unit comes to you in Pompano Beach &amp; Broward.</p></div>
+      <div class="passo"><div class="num">3</div><h3>Clean, fresh, happy</h3><p>Your pet is groomed one-on-one and walks straight back inside.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sobre">
+  <div class="wrap sobre-grid">
+    <div class="arco"><img src="logo-petmobile.png" alt="Pet Mobile Dog House — official logo"></div>
+    <div>
+      <div class="eyebrow">About us</div>
+      <h2>A little Brazil, <em>a lot of love</em>, at your door</h2>
+      <p><strong>Pet Mobile Dog House</strong> is a mobile pet grooming service based in <strong>Pompano Beach, FL</strong>, serving homes across Broward County.</p>
+      <p>Our flags tell our story: Brazilian warmth and care, American convenience. We speak <strong>English and Portuguese</strong> — atendimento em português, com carinho.</p>
+      <p class="citacao">"Clean • Fresh • Happy — that's how every pet should come home."</p>
+      <ul class="creds">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mobile service — we come to your home</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>One pet at a time — no crates, no waiting rooms</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Bath &amp; full grooming — banho e tosa completa</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pompano Beach &amp; Broward County, FL</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<div class="faixa">
+  <div class="f1">The difference</div>
+  <div class="f2">Your pet's spa day,<br>parked in <em>your driveway</em>.</div>
+</div>
+
+<!-- FORM + FAQ -->
+<section id="contato">
+  <div class="wrap form-grid">
+    <div>
+      <div class="eyebrow">Book your appointment</div>
+      <h2 class="serif" style="font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.18;margin:14px 0 12px">Tell us about <em>your pet</em></h2>
+      <p style="color:var(--suave);margin-bottom:8px">Fill in the form and the chat opens right in our WhatsApp, with your message ready to send.</p>
+      <ul class="dados">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Pompano Beach &amp; Broward County, FL — we come to you</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>WhatsApp: +1 (954) 856-6521</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z"/></svg>Service in English &amp; Portuguese</li>
+      </ul>
+    </div>
+    <form id="formAnalise" novalidate>
+      <label for="f-nome">Your name *</label>
+      <input id="f-nome" type="text" placeholder="Your name" autocomplete="name">
+      <label for="f-tel">Your WhatsApp *</label>
+      <input id="f-tel" type="tel" placeholder="+1 (___) ___-____" autocomplete="tel">
+      <label for="f-tipo">Service</label>
+      <select id="f-tipo">
+        <option>Bath &amp; Brush</option>
+        <option>Full Grooming (haircut)</option>
+        <option>Nails, ears &amp; finishing</option>
+        <option>Puppy / senior care</option>
+        <option>Cat grooming</option>
+      </select>
+      <label for="f-msg">About your pet</label>
+      <textarea id="f-msg" rows="4" placeholder="E.g.: Bella, a golden retriever, about 40 lbs, in Pompano Beach..."></textarea>
+      <button class="btn-wa form-btn" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+        Send &amp; book on WhatsApp
+      </button>
+      <p class="form-nota">You'll be taken to WhatsApp. No data is stored on this site.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="wrap" style="max-width:820px">
+    <div class="sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow">Good to know</div>
+      <h2>Questions, <em>answered</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Where does the grooming happen?<span class="mais">+</span></button>
+      <div class="faq-a"><p>At your home. Our mobile grooming unit parks at your address and your pet is groomed right there — no salon trip, no crate, no waiting room.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Which areas do you serve?<span class="mais">+</span></button>
+      <div class="faq-a"><p>We're based in Pompano Beach and serve homes across Broward County, FL. Not sure if we reach your street? Ask us on WhatsApp.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you groom cats too?<span class="mais">+</span></button>
+      <div class="faq-a"><p>Yes! As our logo shows, cats are welcome — gentle bath &amp; grooming for felines, in the calm of their own home.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How do I book?<span class="mais">+</span></button>
+      <div class="faq-a"><p>Just tap any button on this page and say hi on WhatsApp. Tell us your pet's breed, size and what you need, and we'll find your spot.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you speak Portuguese?<span class="mais">+</span></button>
+      <div class="faq-a"><p>Yes — service in English and Portuguese. Atendimento em português, com o carinho brasileiro que o seu pet merece.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final">
+  <div class="wrap cta-grid">
+    <div>
+      <div class="eyebrow">Ready when you are</div>
+      <h2>Your pet's next spa day is <em>one message away</em></h2>
+      <p>Book on WhatsApp and we'll bring the bath, the bubbles and the love to your door — clean, fresh, happy.</p>
+      <a class="btn-wa" href="https://wa.me/19548566521?text=Hi!%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20grooming%20appointment%20for%20my%20pet." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+        Book Your Appointment!
+      </a>
+      <p class="microcopy">Pompano Beach &amp; Broward County · English &amp; Português</p>
+    </div>
+    <div class="arco"><img src="logo-petmobile.png" alt="Pet Mobile Dog House — official logo"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="nome">Pet Mobile Dog House</div>
+        <div style="font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro);font-weight:800;margin:2px 0 10px">Mobile Pet Grooming — Pompano Beach, FL</div>
+        <div>Clean • Fresh • Happy</div>
+      </div>
+      <div>
+        <div>Mobile grooming at your home</div>
+        <div>Pompano Beach &amp; Broward County</div>
+        <div style="margin-top:6px">Banho e Tosa — we come to you</div>
+      </div>
+      <div>
+        <div>WhatsApp: <a href="https://wa.me/19548566521" target="_blank" rel="noopener">+1 (954) 856-6521</a></div>
+        <div>Instagram: <a href="https://www.instagram.com/petmobile_doghouse" target="_blank" rel="noopener">@petmobile_doghouse</a></div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Pet Mobile Dog House. All rights reserved.</span>
+      <span>Book your appointment on WhatsApp.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/19548566521?text=Hi!%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20grooming%20appointment%20for%20my%20pet." target="_blank" rel="noopener" aria-label="Book on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+</a>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.parentElement, ans=item.querySelector('.faq-a'), aberto=item.classList.contains('aberto');
+    document.querySelectorAll('.faq-item.aberto').forEach(function(i){i.classList.remove('aberto');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!aberto){item.classList.add('aberto');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+document.getElementById('formAnalise').addEventListener('submit',function(e){
+  e.preventDefault();
+  var nome=document.getElementById('f-nome'), tel=document.getElementById('f-tel'),
+      tipo=document.getElementById('f-tipo').value, msg=document.getElementById('f-msg').value.trim(), ok=true;
+  [nome,tel].forEach(function(c){c.classList.remove('erro');});
+  if(!nome.value.trim()){nome.classList.add('erro');ok=false;}
+  if(!tel.value.trim()){tel.classList.add('erro');ok=false;}
+  if(!ok)return;
+  var texto='Hi! My name is '+nome.value.trim()+'. I would like to book: '+tipo+'.'+(msg?' '+msg:'')+' (My WhatsApp: '+tel.value.trim()+')';
+  window.open('https://wa.me/19548566521?text='+encodeURIComponent(texto),'_blank');
+});
+</script>
+</body>
+</html>
